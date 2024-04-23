@@ -28,7 +28,7 @@ specs:
 {% if name.endswith("pypy3") %}
   - python 3.9.* *_pypy
 {% else %}
-  - python 3.10.*
+  - python 3.10.* *_cpython
 {% endif %}
   - conda {{ version.split("-")[0] }}
   - conda-libmamba-solver {{ conda_libmamba_solver_version }}
