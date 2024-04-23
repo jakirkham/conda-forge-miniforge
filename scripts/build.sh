@@ -11,18 +11,18 @@ cd "${CONSTRUCT_ROOT}"
 
 echo "***** Install constructor *****"
 
-mamba install --yes \
+conda install --yes \
     --channel conda-forge --override-channels \
     jinja2 curl libarchive \
     "constructor>=3.4.5"
 
 if [[ "$(uname)" == "Darwin" ]]; then
-    mamba install --yes \
+    conda install --yes \
         --channel conda-forge --override-channels \
         coreutils
 fi
 
-mamba list
+conda list
 
 echo "***** Make temp directory *****"
 if [[ "$(uname)" == MINGW* ]]; then
